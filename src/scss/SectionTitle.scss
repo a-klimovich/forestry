@@ -1,0 +1,25 @@
+@import './variables';
+
+.section-title {
+  position: relative;
+  color: $green;
+  margin-bottom: 18px;
+
+  h2 {
+    padding-bottom: 9px;
+  }
+
+  span {
+    position: absolute;
+    bottom: 0;
+    right: calc(100% + 10px);
+  }
+
+  hr {
+    position: absolute;
+    left: -46px;
+    bottom: 4px;
+    width: 284px;
+    border-color: #C4C4C4;
+  }
+}
