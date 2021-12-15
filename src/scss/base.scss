@@ -1,0 +1,82 @@
+@import "variables";
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+@font-face {
+  font-family: "HarmoniaSansProCyr";
+  src: url("../fonts/HarmoniaSansProCyr-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HarmoniaSansProCyr";
+  src: url("../fonts/HarmoniaSansProCyr-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "HarmoniaSansProCyr";
+  src: url("../fonts/HarmoniaSansProCyr-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+html, body {
+  font-family: "HarmoniaSansProCyr", sans-serif;
+  height: 100%;
+
+  background-color: $white;
+  color: $dark;
+}
+
+h1, .h1 {
+  font-size: 36px;
+  line-height: 36px;
+}
+h2, .h2 {
+  font-size: 24px;
+  line-height: 29px;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a, button {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+header {
+  background-color: #c23d32;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex: 0 0 auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
