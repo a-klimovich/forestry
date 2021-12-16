@@ -1,19 +1,30 @@
 (function () {
-  document.querySelectorAll("nav.navbar li").forEach(item => {
-    item.onmouseover = item.onmouseout = handler;
+  const headerMenuListItems = document.querySelectorAll("nav .navbar li")
+  const mobileMenuBtn = document.querySelector('#mobileNavMenuBtn')
+  const navBar = document.querySelector("nav > .navbar")
+  // NAVIGATION MENU 
+  headerMenuListItems.forEach(item => {
+    const NavItem = item.querySelector('.dropdown-list')
+    item.addEventListener('click', () => {
+      NavItem !== null
+      ? NavItem.classList.toggle('active')
+      : false
+    })
+  })
 
-    function handler(event) {
-      if (event.type == 'mouseover') {
-        item.querySelector('.dropdown-list') !== null 
-        ? item.querySelector('.dropdown-list').style.display = 'block'
-        : false
-      }
-
-      if (event.type == 'mouseout') {
-        item.querySelector('.dropdown-list') !== null 
-        ? item.querySelector('.dropdown-list').style.display = 'none'
-        : false
-      }
+  window.addEventListener('click', e => {
+    const target = e.target
+    const menuDropdownList = document.querySelectorAll('.dropdown-list')
+    if (!target.closest('nav') && !target.closest('.dropbtn')) {
+      menuDropdownList.forEach(i => i.classList.remove('active'))
+      mobileMenuBtn.classList.remove('active')
+      navBar.classList.remove('active')
     }
   })
+
+  mobileMenuBtn.addEventListener('click', () => {
+    mobileMenuBtn.classList.toggle('active')
+    navBar.classList.toggle('active')
+  })
+  // NAVIGATION MENU END
 })()

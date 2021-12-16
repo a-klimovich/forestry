@@ -9,6 +9,17 @@ header {
   align-items: center;
   padding: 17px 0 ;
 
+  @media screen and (max-width: 1024px) {
+    margin-top: 46px;
+
+    .logo-wrapper {
+      margin: 0 auto;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    margin-top: 0;
+  }
+
   .logo-wrapper {
     display: flex;
     align-items: flex-end;
@@ -26,6 +37,105 @@ header {
       max-width: 167px;
       color: #FEFEFE;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    @media screen and (max-width: 1024px) {
+      .logo-image {
+        width: 55px;
+        height: 69px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 102%;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .logo-image {
+        width: 28px;
+      height: 35px;
+      }
+
+      p {
+        font-size: 10px;
+        line-height: 102%;
+      }
+    }
+  }
+
+  .to-top {
+    display: flex;
+    
+
+    @media screen and (max-width: 1024px) {
+      position: absolute;
+      width: 100%;
+      justify-content: space-around;
+      background: #E7E7E7;
+      top: 0;
+      left: 0;
+      height: 46px;
+
+      .location {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-left: 10%;
+        font-size: 12px;
+        line-height: 14px;
+
+        &__wrapper {
+          justify-content: flex-start;
+
+          br {
+            display: none;
+          }
+          
+          svg {
+            position: absolute;
+            right: 100%;
+            top: 7px;
+          }
+        }
+      }
+
+      .hot-line-phone {
+        flex-direction: row;
+        font-size: 14px;
+        line-height: 17px;
+      }
+
+      .lang {
+        flex-direction: row;
+        align-items: center;
+
+        a {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      width: fit-content;
+      right: 10px;
+      left: auto;
+      top: 5px;
+      background-color: transparent;
+
+      .location, .hot-line-phone {
+        display: none;
+      }
+
+      .lang {
+        flex-direction: column;
+        
+        a {
+          height: 14px;
+          margin-bottom: 6px;
+        }
+      }
     }
   }
 
@@ -50,7 +160,6 @@ header {
   .hot-line-phone, .lang {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
   }
 
   .hot-line-phone {
@@ -58,6 +167,7 @@ header {
 
     div {
       height: 16px;
+      width: 18px;
     }
 
     a {
