@@ -1,9 +1,9 @@
 @import './variables';
 
 .partner-item {
-  width: 165px;
+  max-width: 165px;
   height: 54px;
-  margin: 0 3px;
+  margin: 5px 3px;
 
   img {
     width: 100%;

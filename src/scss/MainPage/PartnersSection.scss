@@ -2,6 +2,7 @@
 
 .partners-sectin {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-bottom: 57px;
 }
