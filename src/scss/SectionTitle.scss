@@ -22,4 +22,34 @@
     width: 284px;
     border-color: #C4C4C4;
   }
+
+  @media screen and (max-width: 1300px) {
+    padding-left: 50px;
+    span {
+      left: 0;
+      right: auto;
+    }
+    hr {
+      left: 0;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding-left: 45px;
+    h2 {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  @media screen and (max-width: 780px) {
+    padding-left: 0px;
+    span {
+      display: none;
+    }
+    hr {
+      left: 0;
+      width: 100%;
+    }
+  }
 }

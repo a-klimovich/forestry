@@ -1,0 +1,41 @@
+@import './variables';
+
+.pagination-list {
+  padding-left: 0;
+  list-style-type: none;
+  display: flex;
+
+
+  .page-number {
+    width: 39px;
+    height: 39px;
+    margin-right: 3px;
+    border: 1px solid $gray;
+    cursor: pointer;
+    
+    &:hover {
+      border: 1px solid $green;
+
+      a {
+        color: $green;
+      }
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      color: $gray;
+    }
+  }
+
+  .active {
+    border: 1px solid $green;
+    a {
+      color: $green;
+    }
+  }
+}

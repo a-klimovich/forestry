@@ -1,0 +1,61 @@
+@import './variables';
+
+.about-company-card {
+  display: flex;
+  background-color: $gray-light;
+  padding: 16px 0 16px 43px;
+  margin-bottom: 6px;
+
+  &__photos-wrapper {
+    display: flex;
+
+    .photos-wrapper__image-person,
+    .photos-wrapper__image-building {
+      height: 137px;
+
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .photos-wrapper__image-person {
+      width: 137px;
+      margin-right: 95px;
+      
+      img {
+        min-width: 137px;
+      }
+    }
+
+    .photos-wrapper__image-building {
+      width: 325px;
+
+      img {
+        min-width: 325px;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    &-title {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      margin-bottom: 34px;
+      color: #2D2D2F;
+    }
+
+    &-contacts {
+      font-size: 14px;
+      line-height: 17px;
+      text-align: center;
+    }
+  }
+}

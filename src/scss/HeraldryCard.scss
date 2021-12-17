@@ -1,0 +1,25 @@
+@import './variables';
+
+.heraldry-card {
+  display: flex;
+  padding: 20px;
+  background-color: $gray-light;
+  margin-bottom: 6px;
+
+  &__image {
+    width: 269px;
+    height: 150px;
+
+    img {
+      min-width: 269px;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__text {
+    padding-left: 33px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
