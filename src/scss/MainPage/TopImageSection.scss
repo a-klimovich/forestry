@@ -1,0 +1,41 @@
+@import '../variables';
+
+.top-picture-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 596px;
+  margin-bottom: 25px;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    padding-right: calc((100vw - 1200px) / 2);
+    top: 40%;
+    right: 0;
+    width: 100%;
+    max-width: 950px;
+    height: 242px;
+    color: $white;
+    background: linear-gradient(270deg, rgba(123, 149, 81, 0.87) 17.79%, rgba(123, 149, 81, 0) 98.44%);
+
+    &-title {
+      text-transform: uppercase;
+    }
+
+    &-subtitle {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+}

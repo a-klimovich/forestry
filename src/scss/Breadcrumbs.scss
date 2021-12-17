@@ -1,0 +1,29 @@
+@import "./variables";
+
+.breadcrumbs {
+  justify-content: flex-start;
+  background: transparent;
+  font-size: 12px;
+  line-height: 14px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid $gray;
+  margin-bottom: 1rem;
+
+  a {
+    color: $dark-light;
+
+    &:hover, &.active {
+      color: $green;
+    }
+  }
+
+  .separator {
+    transform: rotate(-90deg);
+    margin: 0 5px;
+
+    svg {
+      width: 1rem;
+      height: 0.3rem;
+    }
+  }
+}
