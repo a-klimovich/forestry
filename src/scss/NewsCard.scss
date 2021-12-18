@@ -24,6 +24,8 @@
       font-size: 18px;
       line-height: 22px;
       margin-bottom: 45px;
+      max-height: 2.6rem;
+      overflow: hidden;
     }
 
     &-date {
@@ -39,6 +41,58 @@
       line-height: 17px;
       height: calc($lineheight * 4);
       overflow: hidden;
+    }
+  }
+
+  @media screen and (max-width: 1023.9px) { 
+    &__content {
+      padding: 11px 13px 11px 18px;
+      
+      &-title {
+        font-size: 16px;
+        line-height: 19px;
+        margin-bottom: 7px;
+        max-height: 3.5rem;
+      }
+  
+      &-date {
+        margin-bottom: 9px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 767.9px) {
+    &__image {
+      width: 112px;
+      height: 124px;
+
+      img {
+        min-width: 112px;
+      }
+    }
+
+    &__content {
+      padding: 0 7px;
+
+      &-title {
+        font-size: 14px;
+        line-height: 17px;
+        max-height: 3.2rem;
+        margin-bottom: 4px;
+      }
+
+      &-date {
+        font-size: 10px;
+        line-height: 12px;
+        margin-bottom: 7px;
+      }
+  
+      &-text {
+        font-size: 10px;
+        line-height: 12px;
+        max-height: 2.3rem;
+        overflow: hidden;
+      }
     }
   }
 }

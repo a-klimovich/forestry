@@ -45,7 +45,7 @@ footer {
       }
     }
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1023.99px) {
       flex-direction: row;
       display: flex;
       justify-content: space-between;
@@ -53,7 +53,7 @@ footer {
       padding: 15px 34px 26px;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767.99px) {
       padding: 13px 10px;
       
       h3 {
@@ -76,7 +76,7 @@ footer {
     width: 100%;
     padding: 30px 0;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767.99px) {
       flex-direction: column;
       padding: 14px 0;
 
@@ -160,7 +160,7 @@ footer {
         }
       }
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 767.99px) {
         align-items: flex-start;
 
         .hot-line-phone div {
@@ -181,7 +181,7 @@ footer {
       margin: 22px 13px;
     }
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1023.99px) {
       padding: 9px 0;
 
       &-item {
@@ -193,7 +193,7 @@ footer {
   &__copyright {
     padding: 29px 0 40px 0;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1023.99px) {
       padding: 11px 0 14px 0;
     }
   }

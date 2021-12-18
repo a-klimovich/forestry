@@ -5,7 +5,9 @@
   color: $green;
   margin-bottom: 18px;
 
-  h2 {
+  &__title {
+    font-size: 24px;
+    line-height: 29px;
     padding-bottom: 9px;
   }
 
@@ -25,6 +27,7 @@
 
   @media screen and (max-width: 1300px) {
     padding-left: 50px;
+
     span {
       left: 0;
       right: auto;
@@ -34,9 +37,10 @@
     }
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1023.99px) {
     padding-left: 45px;
-    h2 {
+
+    &__title {
       font-size: 18px;
       line-height: 22px;
     }

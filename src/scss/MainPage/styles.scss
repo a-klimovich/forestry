@@ -3,10 +3,25 @@
 .latest-news-section {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 60px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+
+  @media screen and (max-width: 647px) {
+    justify-content: center;
+  }
 }
 
 .actual-news-section {
-  margin-top: 75px;
+  margin-top: 45px;
   margin-bottom: 70px;
+
+  @media screen and (max-width: 1023.99px) {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (max-width: 647px) {
+    margin-top: 13px;
+    margin-bottom: 13px;
+  }
 }

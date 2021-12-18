@@ -47,7 +47,7 @@ nav {
     }
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1023.99px) {
     display: none;
   }
   
@@ -55,7 +55,7 @@ nav {
     padding: 8px 21px;
     position: relative;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767.99px) {
       padding: 8px 0;
     }
   }
@@ -126,7 +126,7 @@ nav {
   height: 22px;
   
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767.99px) {
     position: absolute;
     top: -110%;
     left: 10px;
@@ -146,7 +146,7 @@ nav {
     line-height: 12px;
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1023.99px) {
     display: flex;
   }
 

@@ -45,7 +45,7 @@
     }
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1023.99px) {
     position: relative;
     height: 275px;
     margin-bottom: 45px;
@@ -80,6 +80,23 @@
 
       &-title {
         margin-bottom: 1rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 767.99px) {
+    height: 147px;
+
+    &__content {
+      padding-right: 0;
+
+      &-title {
+        margin-bottom: 0;
+      }
+
+      &-subtitle {
+        font-size: 18px;
+        line-height: 22px;
       }
     }
   }
