@@ -1,0 +1,36 @@
+@import '../variables';
+
+.heraldrys-page {
+  margin-bottom: 53px;
+
+  .heraldrys-section {
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    margin-top: 19px;
+    margin-bottom: 26px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__title {
+      font-weight: bold;
+      color: $green;
+    }
+  }
+
+  @media screen and (max-width: 1023.9px) {
+    margin-bottom: 23px;
+  }
+
+  @media screen and (max-width: 567.9px) {
+    .heraldrys-section {
+      margin-top: 13px;
+      margin-bottom: 12px;
+      font-size: 12px;
+      line-height: 14px;
+    }
+    
+    margin-bottom: 13px;
+  }
+}

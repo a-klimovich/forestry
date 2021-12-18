@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('./utils/head.html')
+  <body>
+    <div class="wrapper">
+      @@include('./Header/index.html')
+      <hr>
+      @@include('./Header/Navbar/index.html')
+
+      <main>
+        <div class="container">
+          <div class="about-company-page">
+            @@include('./Breadcrumbs.html')
+
+            @@loop('./AboutCompanyCard.html', [
+              {
+                'imagePersone': '../assets/person-photo-01.jpg',
+                'imageBuilduing': '../assets/photo-building-01.jpg',
+                'title': 'Болотское лесничество',
+                'addres': '225863, Кобринский р-н, д.Болота ул. Ленина, д.44',
+                'phoneNumber': '+375 (1642) 4-79-52, 4-79-32',
+                'arboriculturist': 'Радкович Александр Сергеевич',
+              },
+              {
+                'imagePersone': '../assets/person-photo-01.jpg',
+                'imageBuilduing': '../assets/photo-building-01.jpg',
+                'title': 'Болотское лесничество',
+                'addres': '225863, Кобринский р-н, д.Болота ул. Ленина, д.44',
+                'phoneNumber': '+375 (1642) 4-79-52, 4-79-32',
+                'arboriculturist': 'Радкович Александр Сергеевич',
+              },
+              {
+                'imagePersone': '../assets/person-photo-01.jpg',
+                'imageBuilduing': '../assets/photo-building-01.jpg',
+                'title': 'Болотское лесничество',
+                'addres': '225863, Кобринский р-н, д.Болота ул. Ленина, д.44',
+                'phoneNumber': '+375 (1642) 4-79-52, 4-79-32',
+                'arboriculturist': 'Радкович Александр Сергеевич',
+              },
+            ])
+          </div>
+        </div>
+      </main>
+      
+      @@include('./Footer/index.html')
+    </div>
+  </body>
+  @@include('./utils/includies.html')
+</html>

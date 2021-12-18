@@ -22,4 +22,40 @@
     font-size: 14px;
     line-height: 17px;
   }
+
+  @media screen and (max-width: 1023.9px) {
+    padding: 20px 12px;
+
+    &__image {
+      width: 156px;
+      height: 150px;
+
+      img {
+        min-width: 156px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 567.9px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+
+    &__image {
+      width: 212px;
+      height: 121px;
+      margin-bottom: 17px;
+  
+      img {
+        min-width: 212px;
+      }
+    }
+
+    &__text {
+      padding: 0;
+      font-size: 12px;
+      line-height: 14px;
+      text-align: justify;
+    }
+  }
 }
