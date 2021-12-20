@@ -4,6 +4,7 @@
   position: relative;
   color: $green;
   margin-bottom: 18px;
+  max-width: fit-content;
 
   &__title {
     font-size: 24px;
@@ -21,7 +22,7 @@
     position: absolute;
     left: -46px;
     bottom: 4px;
-    width: 284px;
+    width: calc(100% + 50px);
     border-color: #C4C4C4;
   }
 

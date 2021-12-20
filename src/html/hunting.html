@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('./utils/head.html')
+  <body>
+    <div class="wrapper">
+      @@include('./Header/index.html')
+      <hr>
+      @@include('./Header/Navbar/index.html')
+
+      <main>
+        <div class="container">
+          <div class="hunting-page">
+            @@include('./Breadcrumbs.html')
+            
+            <a class="toMap-link" href="#huntingMapAnchor">КАРТА</a>
+
+            <p>
+              Охотничьи угодья Кобринского опытного лесхоза расположены в южной части Кобринского района Брестской области. На севере охотничьи угодья граничат с охотничьими угодьями ЧУП «Стриж» ГОО «ООР», на востоке – с охотничьими угодьями СООО «Автосеть», на юге – с пограничной полосой вдоль Государственной границы Республики Беларусь с Украиной, на западе – с  охотничьими угодьями учреждения «Кобринская РОС» РГОО «БООР».
+              <br><br>
+              В охотхозяйстве выделены четыре зоны:
+              <br><br>
+              зона покоя — 2144,0га или 5,1 %;
+              <br><br>
+              зона преимущественного ведения охотничьего хозяйства на копытных охотничьих животных— 19779,5га или 46,7 %;
+              зона тренировки (натаски, нагонки, притравки и иного обучения), охотничьих собак, ловчих птиц и иных животных, используемых для охоты.-1018,6га или 2,4 %;
+              зона преимущественного ведения охотничьего хозяйства на ненормируемые виды охотничьих животных - 19423,2 или 45,8 %.
+              Штат сотрудников охотхозяйства составляет: 3 eгеря и инженер по охотничьему хозяйству.
+              <br><br>
+              Общая площадь охотничьих угодий по данным УП «Проектный институт «Брестгипрозем» составляет 42365,3 га, в том числе 21001,0 га - лесных, 18457,0 га - полевых, 2906,8 га - водно-болотных.
+              <br><br>
+              Кобринский опытный лесхоз предоставляет в аренду гражданам Республики Беларусь, а так же иностранным гражданам, следующее охотничье оружие (для охоты на территории охотничьего хозяйства лесхоза)
+              <br><br>
+              Карабин охотничий нарезной ВЕПРЬ  кал. 7,62 
+              <br>
+              Карабин охотничий нарезной ВЕПРЬ  кал. 7,62
+              <br><br>
+            </p>
+
+            @@include('./SectionTitle.html', {
+              'title': 'Животные охотничих угодий'
+            })
+
+            <div class="hunting-page__animal-list">
+              @@loop('./AnimalCard/index.html', [
+                {
+                  'link': '#',
+                  'image': '../assets/image/animal-7.jpg',
+                  'name': 'Олень',
+                },
+                {
+                  'link': '#',
+                  'image': '../assets/image/animal-1.jpg',
+                  'name': 'Кабан',
+                },
+                {
+                  'link': '#',
+                  'image': '../assets/image/animal-2.jpg',
+                  'name': 'Лиса',
+                },
+                {
+                  'link': '#',
+                  'image': '../assets/image/animal-3.jpg',
+                  'name': 'Лось',
+                },
+                {
+                  'link': '#',
+                  'image': '../assets/image/animal-4.jpg',
+                  'name': 'Глухарь',
+                },
+                {
+                  'link': '#',
+                  'image': '../assets/image/animal-5.jpg',
+                  'name': 'Бобр',
+                },
+                {
+                  'link': '#',
+                  'image': '../assets/image/animal-6.jpg',
+                  'name': 'Тетерев',
+                },
+                
+                {
+                  'link': '#',
+                  'image': '../assets/image/animal-8.jpg',
+                  'name': 'Косуля',
+                },
+              ])
+            </div>
+
+            @@include('./SectionTitle.html', {
+              'title': 'Разрешения и охотничьи путевки к ним <br> в летне-осеннем сезоне охоты 2021г.'
+            })
+
+
+            <table class="table">
+              <tbody>
+                <tr class="table-row-content">
+                  <td></td>
+                  <td class="table-row-content__price">Цена, бел. руб.</td>
+                </tr>
+                <tr class="table-row-content">
+                  <td>Разовое разрешение на самца тетерева</td>
+                  <td class="table-row-content__price">10,00</td>
+                </tr>
+                <tr class="table-row-content">
+                  <td>Охотничья путевка на 1 день участия в добыче тетерева</td>
+                  <td class="table-row-content__price">10,00</td>
+                </tr>
+                <tr class="table-row-content">
+                  <td>Разовая охотничья путевка на гуся</td>
+                  <td class="table-row-content__price">10,00</td>
+                </tr>
+                <tr class="table-row-content">
+                  <td>Разовая охотничья путевка на утку </td>
+                  <td class="table-row-content__price">10,00</td>
+                </tr>
+                <tr class="table-row-content">
+                  <td>Разовая охотничья путевка на вальдшнепа </td>
+                  <td class="table-row-content__price">10,00</td>
+                </tr>
+                <tr class="table-row-content">
+                  <td>Разовая охотничья путевка на гуся, утку</td>
+                  <td class="table-row-content__price">10,00</td>
+                </tr>
+                <tr class="table-row-content">
+                  <td>Сезонная охотничья путевка на гуся </td>
+                  <td class="table-row-content__price">10,00</td>
+                </tr>
+                <tr class="table-row-content">
+                  <td>Сезонная охотничья путевка на утка </td>
+                  <td class="table-row-content__price">10,00</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <span id="huntingMapAnchor"></span>
+
+            <div class="hunting-page__map-section">
+              <div class="map-scheme">
+                <div class="map-scheme__title">КАРТА-СХЕМА охотничьего хозяйства Кобринского опытного лесхоза</div>
+                <div class="map-scheme__map">
+                  <img src="../assets/image/map-1.jpg" alt="">
+                </div>
+              </div>
+              <div class="map-scheme">
+                <div class="map-scheme__title">СХЕМА размещения места для пристрелки охотничьего оружия</div>
+                <div class="map-scheme__map">
+                  <img src="../assets/image/map-2.jpg" alt="">
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </main>
+      
+      @@include('./Footer/index.html')
+    </div>
+  </body>
+  @@include('./utils/includies.html')
+</html>

@@ -25,4 +25,12 @@
       height: 0.3rem;
     }
   }
+
+  @media screen and (max-width: 767.9px) {
+    min-height: 30px;
+
+    .separator {
+      margin: 0 2px;
+    }
+  }
 }

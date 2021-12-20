@@ -1,0 +1,161 @@
+@import '../variables';
+
+.hunting-page {
+  position: relative;
+  margin-bottom: 67px;
+
+  .toMap-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    background-color: $red;
+    color: $white;
+    height: 42px;
+    width: 109px;
+
+    @media screen and (max-width: 767.9px) {
+      width: 70px;
+      height: 30px;
+      font-size: 14px;
+    }
+  }
+
+  &__animal-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -10px;
+    margin-bottom: 34px;
+    flex-wrap: wrap;
+
+    .animal-card {
+      margin: 0 10px;
+      width: 273px;
+      padding-bottom: 7px;
+      border-bottom: 2px solid $gray;
+      margin-bottom: 14px;
+      
+      &__image {
+        width: 100%;
+        max-width: 273px;
+        height: 183px;
+        margin-bottom: 7px;
+
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &__name {
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        background: $white;
+        width: 100%;
+        color: $dark;
+      }
+
+      &:hover {
+        .animal-card__name {
+          color: $green;
+        }
+
+        .animal-card__image img {
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    @media screen and (max-width: 1023.9px) {
+      .animal-card {
+        width: 214px;
+        margin: 0;
+        margin-bottom: 13px;
+
+        &__image {
+          max-width: 214px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 767.9px) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .animal-card {
+        width: 300px;
+
+        &__image {
+          max-width: 300px;
+        }
+      }
+    }
+  }
+
+  &__map-section {
+    display: flex;
+    justify-content: space-between;
+    background: $gray;
+    padding: 22px 30px;
+    margin: 0 -10px;
+
+    .map-scheme {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      max-height: 336px;
+      margin: 0 10px;
+
+      &__title {
+        $lineHeight: 1.188rem;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: $lineHeight;
+        color: $white;
+        height: $lineHeight * 2;
+        overflow: hidden;
+        text-align: center;
+        margin-bottom: 13px;
+      }
+
+      &__map {
+        max-width: 540px;
+        width: 100%;
+        height: 250px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    @media screen and (max-width: 767.9px) {
+      flex-direction: column;
+      padding: 10px;
+      margin: 0;
+
+      .map-scheme {
+        margin: 0;
+        margin-bottom: 13px;
+
+        &__title {
+          margin-bottom: 5px;
+        }
+
+        &__map {
+          height: 143px;
+        }
+      }
+    }
+  }
+}
