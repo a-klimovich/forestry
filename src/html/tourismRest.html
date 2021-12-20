@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('./utils/head.html')
+  <body>
+    <div class="wrapper">
+      @@include('./Header/index.html')
+      <hr>
+      @@include('./Header/Navbar/index.html')
+
+      @@include('./TitleImageSection.html', {
+        'image': './assets/image/slide-01.jpg',
+        'title': 'ТУРИЗМ И ОТДЫХ',
+      })
+      <main>
+        <div class="container">
+
+          <div class="tourism-and-rest-page">
+            @@include('./Breadcrumbs.html')
+
+            <p class="tourism-and-rest-page__text">
+              В лесу, на берегу живописного озера "Любань" открыл двери для желающих поохотиться и отдохнуть с комфортом охотничий домик Кобринского опытного лесхоза. Здесь созданы все условия для посетителей: душевые кабинки, теплый туалет, телевидение. Четыре комнаты для отдыха, большая гостиная, кухня, оснащенная современной бытовой техникой, баня - комфорт и удобство вашего отдыха. Отдохнуть в домике может любой желающий.
+              <br><br>
+              Координаты расположение охотничьего дома:    51.992762 с.ш.    24.604204 в.д.
+              <br><br>
+              «Добро пожаловать в охотничий комплекс Кобринского опытного лесхоза!».телефон администратора МТС (8029)58-33 -505
+            </p>
+
+            <div class="tourism-and-rest-page__galery">
+              <div class="galery-iamge">
+                <img src="../assets/image/hunting-1.jpg" alt="">
+              </div>
+              <div class="galery-iamge">
+                <img src="../assets/image/hunting-1.jpg" alt="">
+              </div>
+              <div class="galery-iamge">
+                <img src="../assets/image/hunting-1.jpg" alt="">
+              </div>
+              <div class="galery-iamge">
+                <img src="../assets/image/hunting-1.jpg" alt="">
+              </div>
+            </div>
+
+            @@include('./SectionTitle.html', {
+              'title': 'Цены на проживание в охотничьем домике на оз. "Любань" для граждан Республики Беларусь',
+            })
+
+            <table class="table">
+              <tbody>
+                <tr class="table-title">
+                  <td></td>
+                  <td class="table-title__price">Цена, бел. руб.</td>
+                </tr>
+            
+                @@loop('./Table/tr.html', [
+                  {
+                    'title': 'Аренда комплекса (9 мест), руб.',
+                    'price': '',
+                  },
+                  {
+                    'title': '1 сутки',
+                    'price': '210,00',
+                  },
+                  {
+                    'title': '1,5 сутки',
+                    'price': '315,00',
+                  },
+                  {
+                    'title': 'Проживание в охотдомике(в номерах обычной комфортабельности : 2-ух местные,3-ех местные и 4-х местные  номера)',
+                    'price': '',
+                  },
+                  {
+                    'title': 'койко-сутки(1)',
+                    'price': '22,00',
+                  },
+                  {
+                    'title': 'койко-сутки(1,5)',
+                    'price': '33,00',
+                  },
+                ])
+              </tbody>
+            </table>
+
+            <div class="row-tables">
+              <div class="table-wrapper">
+                <p class="table-wrapper__title">
+                  Цены на услуги бани на территории охотничьего комплекса на озере Любань
+                </p>
+                
+                <table class="table">
+                  <tbody>
+                    <tr class="table-title">
+                      <td></td>
+                      <td class="table-title__price">Цена, бел. руб.</td>
+                    </tr>
+                
+                    @@loop('./Table/tr.html', [
+                      {
+                        'title': 'Пользование баней',
+                        'price': '20,00 руб./час',
+                      },
+                      {
+                        'title': 'Прокат простыни, полотенца',
+                        'price': '2,50 руб./шт.',
+                      },
+                      {
+                        'title': 'Веник банный',
+                        'price': '2,50 руб./шт.',
+                      },
+                    ])
+                  </tbody>
+                </table>
+              </div>
+              
+              <div class="table-wrapper">
+                <p class="table-wrapper__title">
+                  Прокат инвентаря
+                </p>
+  
+                <table class="table">
+                  <tbody>
+                    <tr class="table-title">
+                      <td></td>
+                      <td class="table-title__price">Цена, бел. руб.</td>
+                    </tr>
+                
+                    @@loop('./Table/tr.html', [
+                      {
+                        'title': 'Прокат лыж ( с ботинками), за день',
+                        'price': '4,00',
+                      },
+                      {
+                        'title': 'Прокат  санок, ледянок, за день',
+                        'price': '2,00',
+                      },
+                      {
+                        'title': 'Прокат велосипеда, за час',
+                        'price': '2,00',
+                      },
+                    ])
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+      </main>
+      
+      @@include('./Footer/index.html')
+    </div>
+  </body>
+  @@include('./utils/includies.html')
+</html>

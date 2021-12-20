@@ -1,0 +1,63 @@
+@import '../variables';
+
+.certification-page {
+  margin-bottom: 33px;
+
+  &__content {
+    margin-bottom: 33px;
+    ul {
+      list-style-type: '-';
+      padding-left: 1rem;
+
+      li {
+        margin-bottom: 1.2rem;
+        padding-left: 1rem;
+      }
+    }
+  }
+
+  &__file-box {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 46px;
+
+    li {
+      padding-left: 35px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      margin-bottom: 1rem;
+
+      a {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        color: $dark;
+
+        &:hover {
+          color: $green;
+        }
+      }
+
+      span {
+        position: absolute;
+        top: 1px;
+        left: 2px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 767.9px) {
+    margin-bottom: 20px;
+    
+    &_content {
+      ul {
+        padding-left: 0.5em;
+      }
+      ul > li {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@import '../variables';
+
+
+.protected-areas-page {
+  margin-bottom: 53px;
+
+  &__content {
+    ul {
+      list-style-type: '-';
+      padding-left: 1rem;
+
+      li {
+        margin-bottom: 1.2rem;
+        padding-left: 1rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 767.9px) {
+    margin-bottom: 35px;
+    
+    &_content {
+      ul {
+        padding-left: 0.5em;
+      }
+      ul > li {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

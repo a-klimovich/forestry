@@ -27,4 +27,14 @@
     navBar.classList.toggle('active')
   })
   // NAVIGATION MENU END
+
+  // MAP INIT
+  ymaps.ready(init);
+    function init(){
+      let myMap = new ymaps.Map("map", {
+        center: [52.227608372181884, 24.358953455256273],
+        zoom: 10,
+    });
+  }
+  // MAP INIT END
 })()
