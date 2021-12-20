@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('./utils/head.html')
+  <body>
+    <div class="wrapper">
+      @@include('./Header/index.html')
+      <hr>
+      @@include('./Header/Navbar/index.html')
+
+      <main>
+        <div class="container">
+          <div class="animal-item-page">
+            @@include('./Breadcrumbs.html')
+            
+            <a class="anchor-link" href="#animalPriceAnchor">КАРТА</a>
+
+            <p class="animal-item-page__content">
+              Охотничьи угодья Кобринского опытного лесхоза расположены в южной части Кобринского района Брестской области. На севере охотничьи угодья граничат с охотничьими угодьями ЧУП «Стриж» ГОО «ООР», на востоке – с охотничьими угодьями СООО «Автосеть», на юге – с пограничной полосой вдоль Государственной границы Республики Беларусь с Украиной, на западе – с  охотничьими угодьями учреждения «Кобринская РОС» РГОО «БООР».
+              <br><br>
+              В охотхозяйстве выделены четыре зоны:
+              <br><br>
+              зона покоя — 2144,0га или 5,1 %;
+              <br><br>
+              зона преимущественного ведения охотничьего хозяйства на копытных охотничьих животных— 19779,5га или 46,7 %;
+              зона тренировки (натаски, нагонки, притравки и иного обучения), охотничьих собак, ловчих птиц и иных животных, используемых для охоты.-1018,6га или 2,4 %;
+              зона преимущественного ведения охотничьего хозяйства на ненормируемые виды охотничьих животных - 19423,2 или 45,8 %.
+              Штат сотрудников охотхозяйства составляет: 3 eгеря и инженер по охотничьему хозяйству.
+              <br><br>
+              Общая площадь охотничьих угодий по данным УП «Проектный институт «Брестгипрозем» составляет 42365,3 га, в том числе 21001,0 га - лесных, 18457,0 га - полевых, 2906,8 га - водно-болотных.
+              <br><br>
+              Кобринский опытный лесхоз предоставляет в аренду гражданам Республики Беларусь, а так же иностранным гражданам, следующее охотничье оружие (для охоты на территории охотничьего хозяйства лесхоза)
+              <br><br>
+              Карабин охотничий нарезной ВЕПРЬ  кал. 7,62
+              <br><br>
+              Ружье охотничье ИЖ-27, кал.  12
+            </p>
+
+            <div class="animal-item-page__galery">
+              <div class="galery-iamge">
+                <img src="../assets/image/hunting-1.jpg" alt="">
+              </div>
+              <div class="galery-iamge">
+                <img src="../assets/image/hunting-1.jpg" alt="">
+              </div>
+              <div class="galery-iamge">
+                <img src="../assets/image/hunting-1.jpg" alt="">
+              </div>
+              <div class="galery-iamge">
+                <img src="../assets/image/hunting-1.jpg" alt="">
+              </div>
+            </div>
+
+            @@include('./SectionTitle.html', {
+              'title': 'Стоимость разовых разрешений на добычу охотничьих животных нормированных видов и охотничьих путёвок к ним (с 08 октября 2021 года)',
+            })
+
+            <div class="table-price-form">
+              <div class="table-wrapper">
+                <table class="table">
+                  <tbody>
+                    <tr class="table-title">
+                      <td>Лось</td>
+                      <td class="table-title__price">Цена, бел. руб.</td>
+                    </tr>
+                
+                    @@loop('./Table/tr.html', [
+                      {
+                        'title': 'Сеголеток',
+                        'price': '400,00',
+                      },
+                      {
+                        'title': 'Самка взрослая',
+                        'price': '800,00',
+                      },
+                      {
+                        'title': 'Самец взрослый',
+                        'price': '800,00',
+                      },
+                      {
+                        'title': 'Самец трофейный',
+                        'price': '1300,00',
+                      },
+                    ])
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="form-wrapper">
+                <form action="">
+                  <input type="text" name="" id="fullName" placeholder="ФИО">
+                  <div class="form-contacts">
+                    <input type="email" name="" id="eMail" placeholder="Email*" required>
+                    <input type="tel" name="" id="phoneNumber" placeholder="Телефон">
+                  </div>
+
+                  <button type="" class="btn-submit-form">ОТПРАВИТЬ ЗАЯВКУ</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="switching-pages">
+              <div class="switching-pages__switcher switching-pages__switcher_prew">
+                <a href="#"> 
+                  <span>@@include('../assets/arrow-down.svg')</span>
+                   предыдущее животное
+                </a>
+                <span class="animal-to-switch animal-to-switch_prev">ЛИСА</span>
+              </div>
+              <div class="switching-pages__switcher switching-pages__switcher_next">
+                <a href="#">
+                  следующее животное
+                  <span>@@include('../assets/arrow-down.svg')</span>
+                </a>
+                <span class="animal-to-switch animal-to-switch_next">КАБАН</span>
+              </div>
+            </div>
+          </div>
+      </main>
+      
+      @@include('./Footer/index.html')
+    </div>
+  </body>
+  @@include('./utils/includies.html')
+</html>
