@@ -1,0 +1,137 @@
+@import '../variables';
+
+.news-item-page {
+  margin-bottom: 46px;
+
+  @media screen and (max-width: 1023.9px) {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: $green;
+    margin-bottom: 6px;
+  }
+
+  &__date {
+    font-size: 12px;
+    line-height: 14px;
+    color: $green;
+    margin-bottom: 18px;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 14px;
+  }
+
+  .share-news-wrapper {
+    font-size: 12px;
+    line-height: 14px;
+    color: $green;
+    margin-bottom: 18px;
+
+    &__text {
+      margin-bottom: 9px;
+    }
+
+    a {
+      margin-right: 7px;
+
+      svg {
+        width: 28px;
+        height: 28px;
+  
+        path {
+          fill: $green
+        }
+      }
+    }
+  }
+
+  &__galery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .galery-image {
+      width: 273px;
+      height: 183px;
+      margin-bottom: 36px;
+    }
+
+    @media screen and (max-width: 1023.9px) {
+      justify-content: space-around;
+      .galery-image {
+        margin-bottom: 9px;
+      }
+
+      margin-bottom: 18px;
+    }
+
+    @media screen and (max-width: 593px) {
+      justify-content: center;
+    }
+  }
+
+  .switching-pages {
+    display: flex;
+    justify-content: space-between;
+
+    &__switcher {
+      display: flex;
+      flex-direction: column;
+      margin: 0 15px;
+
+      .animal-to-switch {
+        font-size: 14px;
+        line-height: 17px;
+
+        &_next {
+          text-align: end;
+        }
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        color: $green;
+        position: relative;
+        margin-bottom: 7px;
+
+        span {
+          position: absolute;
+          width: fit-content;
+          height: fit-content;
+          display: block;
+
+          svg {
+            width: 14px;
+          }
+        }
+
+        &:hover {
+          color: $dark-green;
+        }
+      }
+    }
+
+    &__switcher_prew {
+      a span {
+        top: 1px;
+        left: -15px;
+        transform: rotate(90deg);
+      }
+    }
+    &__switcher_next {
+      a span {
+        top: 1px;
+        right: -15px;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+}

@@ -7,14 +7,19 @@
       <hr>
       @@include('./Header/Navbar/index.html')
 
+      @@include('./TitleImageSection.html', {
+        'image': './assets/image/slide-02.jpg',
+        'title': 'Лось',
+      })
       <main>
         <div class="container">
+
           <div class="animal-item-page">
             @@include('./Breadcrumbs.html')
             
-            <a class="anchor-link" href="#animalPriceAnchor">КАРТА</a>
+            <a class="anchor-link" href="#price">Цена</a>
 
-            <p class="animal-item-page__content">
+            <p class="animal-item-page__text">
               Охотничьи угодья Кобринского опытного лесхоза расположены в южной части Кобринского района Брестской области. На севере охотничьи угодья граничат с охотничьими угодьями ЧУП «Стриж» ГОО «ООР», на востоке – с охотничьими угодьями СООО «Автосеть», на юге – с пограничной полосой вдоль Государственной границы Республики Беларусь с Украиной, на западе – с  охотничьими угодьями учреждения «Кобринская РОС» РГОО «БООР».
               <br><br>
               В охотхозяйстве выделены четыре зоны:
@@ -53,7 +58,7 @@
             @@include('./SectionTitle.html', {
               'title': 'Стоимость разовых разрешений на добычу охотничьих животных нормированных видов и охотничьих путёвок к ним (с 08 октября 2021 года)',
             })
-
+            <span id="price"></span>
             <div class="table-price-form">
               <div class="table-wrapper">
                 <table class="table">
