@@ -5,6 +5,7 @@
   flex-direction: column;
   max-width: 253px;
   margin-bottom: 28px;
+  color: $dark;
 
   &__image {
     width: 100%;
@@ -24,6 +25,19 @@
     max-height: 2rem;
     overflow: hidden;
     margin-bottom: 21px;
+  }
+
+  &:hover {
+    .latest-news-item__image {
+      img {
+        transform: scale(1.03);
+        transition: 0.5s;
+      }
+    }
+
+    .latest-news-item__title {
+      color: $green;
+    }
   }
 
   &__date {

@@ -11,69 +11,15 @@
     margin-bottom: 34px;
     flex-wrap: wrap;
 
-    .animal-card {
-      margin: 0 10px;
-      width: 273px;
-      padding-bottom: 7px;
-      border-bottom: 2px solid $gray;
-      margin-bottom: 14px;
-      
-      &__image {
-        width: 100%;
-        max-width: 273px;
-        height: 183px;
-        margin-bottom: 7px;
-
-        img {
-          height: 100%;
-          object-fit: cover;
-        }
-      }
-
-      &__name {
-        font-size: 14px;
-        line-height: 17px;
-        text-align: center;
-        background: $white;
-        width: 100%;
-        color: $dark;
-      }
-
-      &:hover {
-        .animal-card__name {
-          color: $green;
-        }
-
-        .animal-card__image img {
-          transform: scale(1.05);
-        }
-      }
-    }
-
-    @media screen and (max-width: 1023.9px) {
-      .animal-card {
-        width: 214px;
-        margin: 0;
-        margin-bottom: 13px;
-
-        &__image {
-          max-width: 214px;
-        }
-      }
+    @media screen and (max-width: 1024px) {
+      margin-bottom: 20px;
+      align-items: center;
+      justify-content: flex-start;
     }
 
     @media screen and (max-width: 767.9px) {
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-
-      .animal-card {
-        width: 300px;
-
-        &__image {
-          max-width: 300px;
-        }
-      }
     }
   }
 

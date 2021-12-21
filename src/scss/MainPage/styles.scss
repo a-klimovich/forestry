@@ -1,27 +1,70 @@
 @import '../variables';
 
-.latest-news-section {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 32px;
+.main-page {
+  margin-bottom: 57px;
+  position: relative;
 
-  @media screen and (max-width: 647px) {
-    justify-content: center;
-  }
-}
-
-.actual-news-section {
-  margin-top: 45px;
-  margin-bottom: 70px;
-
-  @media screen and (max-width: 1023.99px) {
-    margin-top: 30px;
-    margin-bottom: 30px;
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 32px;
   }
 
-  @media screen and (max-width: 647px) {
-    margin-top: 13px;
-    margin-bottom: 13px;
+  &__content {
+    margin-bottom: 20px;
+  }
+
+  &__footer-decor {
+    position: absolute;
+    width: 126px;
+    height: 126px;
+    bottom: -63px;
+    right: -5%;
+    transform: translateX(100%);
+
+    svg {
+      width: 100%;
+      height: 100%;
+
+      path {
+        fill: $dark;
+      }
+    }
+
+    @media screen and (max-width: 1600px) {
+      right: -0%;
+    }
+
+    @media screen and (max-width: 1471px) {
+      display: none;
+    }
+  }
+
+  .latest-news-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+
+    @media screen and (max-width: 1024px) {
+      margin-bottom: 12px;
+    }
+  
+    @media screen and (max-width: 647px) {
+      justify-content: center;
+    }
+  }
+  
+  .actual-news-section {
+    margin-top: 45px;
+    margin-bottom: 70px;
+  
+    @media screen and (max-width: 1023.99px) {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  
+    @media screen and (max-width: 647px) {
+      margin-top: 13px;
+      margin-bottom: 13px;
+    }
   }
 }

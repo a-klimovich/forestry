@@ -4,10 +4,14 @@
   padding-top: 41px;
   margin-bottom: 94px;
 
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 32px;
+  }
+
   .feedback-form {
     display: flex;
     flex-direction: column;
-    margin-bottom: 53px;  
+    margin-bottom: 53px;
 
     &__title {
       font-weight: 700;
@@ -16,6 +20,11 @@
       line-height: 29px;
       margin-bottom: 13px;
       text-align: center;
+
+      @media screen and (max-width:1024px) {
+        font-size: 18px;
+        line-height: 22px;
+      }
     }
 
     &__subtitle {
@@ -34,6 +43,14 @@
       width: 100%;
       margin: 0 auto;
 
+      @media screen and (max-width: 1024px) {
+        padding: 30px 21px;
+      }
+
+      @media screen and (max-width: 767.9px) {
+        padding: 10px;
+      }
+
       .form-contact-wrapper {
         display: flex;
 
@@ -42,6 +59,17 @@
             margin-right: 15px;
           }
           max-width: 50%;
+        }
+
+        @media screen and (max-width: 767.9px) {
+          flex-direction: column;
+
+          input {
+            &:first-child {
+              margin-right: 0;
+            }
+            max-width: 100%;
+          }
         }
       }
 
@@ -52,30 +80,49 @@
         border: none;
         padding: 7px 13px;
         font-size: 18px;
-
+        font-style: italic;
+        color: $dark-light;
+        
         &::placeholder {
+          font-style: italic;
+          color: $dark-light;
           font-size: 18px;
           line-height: 22px;
+        }
+
+        @media screen and (max-width: 767.9px) {
+          height: 34px;
+          margin-bottom: 10px;
         }
       }
 
       textarea {
         font-family: "HarmoniaSansProCyr", sans-serif;
+        font-style: italic;
+        color: $dark-light;
         width: 100%;
+        height: 159px;
         margin-bottom: 18px;
         border: none;
         padding: 7px 13px;
         font-size: 18px;
 
         &::placeholder {
+          font-style: italic;
+          color: $dark-light;
           font-size: 18px;
           line-height: 22px;
+        }
+
+        @media screen and (max-width: 767.9px) {
+          height: 94px;
+          margin-bottom: 10px;
         }
       }
 
       button {
         margin: 0 auto;
-        width: 178px;
+        padding: 14px 23px;
         height: 57px;
         background: $green;
         border: none;
@@ -84,12 +131,29 @@
         text-transform: uppercase;
         font-size: 24px;
         line-height: 29px;
+
+        &:hover {
+          background-color: $dark-green;
+        }
+
+        @media screen and (max-width: 1024px) {
+          font-size: 16px;
+          line-height: 19px;
+        }
+        @media screen and (max-width: 767.9px) {
+          padding: 7px 23px;
+          height: 35px;
+        }
       }
     }
   }
 
   &__content {
     margin-bottom: 70px;
+
+    @media screen and (max-width: 1024px) {
+      margin-bottom: 40px;
+    }
 
     .section-title {
       width: 100%;
