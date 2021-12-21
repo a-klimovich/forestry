@@ -1,0 +1,31 @@
+@import '../variables';
+
+
+.slider-galery-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .galery-slider {
+    display: none;
+  
+    position: fixed;
+    max-width: 90vw;
+    max-height: 90vh;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 99;
+
+    .slide {
+      padding: 15px;
+      background-color: $white;
+      border-radius: 8px;
+      max-width: 90vw;
+      margin: 0 50vw;
+
+      img {
+        max-height: 80vh;
+      }
+    }
+  }
+}
