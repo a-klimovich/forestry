@@ -6,11 +6,15 @@
   $(document).ready(() => {
     headerMenuListItems.forEach(item => {
       const NavItem = item.querySelector('.dropdown-list')
+      const NavBtn = item.querySelector('.dropbtn')
+
       item.addEventListener('click', () => {
         $('.navbar div.dropdown-list.active').removeClass('active')
+        $('.navbar button.dropbtn.active').removeClass('active')
         
         if (NavItem !== null) {
           NavItem.classList.toggle('active')
+          NavBtn.classList.toggle('active')
         }
       })
     })
@@ -21,6 +25,7 @@
     const menuDropdownList = document.querySelectorAll('.dropdown-list')
     if (!target.closest('nav') && !target.closest('.dropdown-list')) {
       menuDropdownList.forEach(i => i.classList.remove('active'))
+      $('.navbar button.dropbtn.active').removeClass('active')
       mobileMenuBtn.classList.remove('active')
       navBar.classList.remove('active')
     }

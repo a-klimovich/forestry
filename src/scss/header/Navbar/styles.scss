@@ -47,6 +47,19 @@ nav {
     }
   }
 
+  .dropbtn {
+    svg {
+      transition: all 0.4s;
+      transform: rotate(0deg);
+    }
+
+    &.active {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
   @media screen and (max-width: 1023.99px) {
     display: none;
   }
