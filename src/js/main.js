@@ -3,19 +3,23 @@
   const mobileMenuBtn = document.querySelector('#mobileNavMenuBtn')
   const navBar = document.querySelector("nav > .navbar")
   // NAVIGATION MENU 
-  headerMenuListItems.forEach(item => {
-    const NavItem = item.querySelector('.dropdown-list')
-    item.addEventListener('click', () => {
-      NavItem !== null
-      ? NavItem.classList.toggle('active')
-      : false
+  $(document).ready(() => {
+    headerMenuListItems.forEach(item => {
+      const NavItem = item.querySelector('.dropdown-list')
+      item.addEventListener('click', () => {
+        $('.navbar div.dropdown-list.active').removeClass('active')
+        
+        if (NavItem !== null) {
+          NavItem.classList.toggle('active')
+        }
+      })
     })
   })
 
   window.addEventListener('click', e => {
     const target = e.target
     const menuDropdownList = document.querySelectorAll('.dropdown-list')
-    if (!target.closest('nav') && !target.closest('.dropbtn')) {
+    if (!target.closest('nav') && !target.closest('.dropdown-list')) {
       menuDropdownList.forEach(i => i.classList.remove('active'))
       mobileMenuBtn.classList.remove('active')
       navBar.classList.remove('active')
@@ -37,8 +41,6 @@
           zoom: 10,
       });
     }
-  } else {
-    console.log('Something wrong "YandexMap"');
   }
   // MAP INIT END
 
@@ -62,8 +64,9 @@
 
     $sliderMain.slick({
       slidesToShow: 1,
-      variableWidth: true,
+      speed: 0,
       centerMode: true,
+      variableWidth: true,
       adaptiveHeight: true,
       prevArrow: `<button type="button" id="previous-button" aria-label="Previous" class="baguetteBox-button"><svg width="44" height="60"><polyline points="30 10 10 30 30 50" stroke="rgba(255,255,255,0.5)" stroke-width="4" stroke-linecap="butt" fill="none" stroke-linejoin="round"></polyline></svg></button>`,
       nextArrow: `<button type="button" id="next-button" aria-label="Next" class="baguetteBox-button"><svg width="44" height="60"><polyline points="14 10 34 30 14 50" stroke="rgba(255,255,255,0.5)" stroke-width="4" stroke-linecap="butt" fill="none" stroke-linejoin="round"></polyline></svg></button>`,
@@ -79,11 +82,11 @@
 
     function SliderShown (isShown, currentSlide) {
       if (isShown === true ) {
+        $sliderMain.slick('slickGoTo', currentSlide);
         $overlay.appendTo(document.body);
         $('body').css('overflow-y', 'hidden')
         $sliderCloser.css("display", "block")
         $sliderMain.css("display", "block")
-        $sliderMain.slick('slickGoTo', currentSlide);
       } else {
         $overlay.remove()
         $('body').css('overflow-y', 'auto')
