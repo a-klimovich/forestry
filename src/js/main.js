@@ -1,22 +1,30 @@
 (function () {
+  // NAVIGATION MENU 
   const headerMenuListItems = document.querySelectorAll("nav .navbar li")
   const mobileMenuBtn = document.querySelector('#mobileNavMenuBtn')
   const navBar = document.querySelector("nav > .navbar")
-  // NAVIGATION MENU 
-  $(document).ready(() => {
-    headerMenuListItems.forEach(item => {
-      const NavItem = item.querySelector('.dropdown-list')
-      const NavBtn = item.querySelector('.dropbtn')
 
-      item.addEventListener('click', () => {
-        $('.navbar div.dropdown-list.active').removeClass('active')
-        $('.navbar button.dropbtn.active').removeClass('active')
-        
-        if (NavItem !== null) {
-          NavItem.classList.toggle('active')
-          NavBtn.classList.toggle('active')
-        }
-      })
+  headerMenuListItems.forEach(item => {
+    const NavItem = item.querySelector('.dropdown-list')
+    const NavBtn = item.querySelector('.dropbtn')
+
+    item.addEventListener('click', () => {
+      const DropList = document.querySelectorAll('.navbar .dropdown-list.active')
+      const DropBtn = document.querySelectorAll('.navbar .dropbtn.active')
+
+      if (DropList.length > 0 && DropBtn.length > 0) {
+        DropList.forEach(i => {
+          i.classList.toggle('active')
+        })
+        DropBtn.forEach(i => {
+          i.classList.toggle('active')
+        })
+      }
+      
+      if (NavItem !== null) {
+        NavItem.classList.toggle('active')
+        NavBtn.classList.toggle('active')
+      }
     })
   })
 
@@ -25,7 +33,7 @@
     const menuDropdownList = document.querySelectorAll('.dropdown-list')
     if (!target.closest('nav') && !target.closest('.dropdown-list')) {
       menuDropdownList.forEach(i => i.classList.remove('active'))
-      $('.navbar button.dropbtn.active').removeClass('active')
+      document.querySelector('.navbar button.dropbtn.active').removeClass('active')
       mobileMenuBtn.classList.remove('active')
       navBar.classList.remove('active')
     }
@@ -38,7 +46,7 @@
   // NAVIGATION MENU END
 
   // MAP INIT
-  if ($('#map').length) {
+  if (document.querySelector('#map')) {
     ymaps.ready(init);
       function init(){
         let myMap = new ymaps.Map("map", {
@@ -49,60 +57,13 @@
   }
   // MAP INIT END
 
-  // SLIDER
-  $(document).ready(function(){
-    const $overlay = $(`<div class="overlay"><div>`)
-    const $sliderCloser = $('#close-button')
-    const $sliderMain = $('.galery-slider')
-    const $tourismGalery = document.querySelectorAll('.tourism-and-rest-page__galery .galery-iamge')
-    const $animalGalery = document.querySelectorAll('.animal-item-page__galery .galery-iamge')
-    const $newsItemGalery = document.querySelectorAll('.news-item-page__galery .galery-image')
-    
-    let arr = [$tourismGalery, $animalGalery, $newsItemGalery]
-    let arrGalleryImage = []
+  // GALERY
+  baguetteBox.run('.baguetteBoxGalery');
 
-    arr.map((item) => {
-      return item.length > 0 ? arrGalleryImage.push(...item) : []
-    })
-    
-    let isShownSlider = false
-
-    $sliderMain.slick({
-      slidesToShow: 1,
-      speed: 0,
-      centerMode: true,
-      variableWidth: true,
-      adaptiveHeight: true,
-      prevArrow: `<button type="button" id="previous-button" aria-label="Previous" class="baguetteBox-button"><svg width="44" height="60"><polyline points="30 10 10 30 30 50" stroke="rgba(255,255,255,0.5)" stroke-width="4" stroke-linecap="butt" fill="none" stroke-linejoin="round"></polyline></svg></button>`,
-      nextArrow: `<button type="button" id="next-button" aria-label="Next" class="baguetteBox-button"><svg width="44" height="60"><polyline points="14 10 34 30 14 50" stroke="rgba(255,255,255,0.5)" stroke-width="4" stroke-linecap="butt" fill="none" stroke-linejoin="round"></polyline></svg></button>`,
-    })
-
-    arrGalleryImage.forEach((item, idx) => {
-      item.addEventListener('click', () => {
-        isShownSlider = !isShownSlider
-
-        SliderShown(isShownSlider, idx)
-      })
-    })
-
-    function SliderShown (isShown, currentSlide) {
-      if (isShown === true ) {
-        $sliderMain.slick('slickGoTo', currentSlide);
-        $overlay.appendTo(document.body);
-        $('body').css('overflow-y', 'hidden')
-        $sliderCloser.css("display", "block")
-        $sliderMain.css("display", "block")
-      } else {
-        $overlay.remove()
-        $('body').css('overflow-y', 'auto')
-        $sliderCloser.css("display", "none")
-        $sliderMain.css("display", "none")
-      }
+  baguetteBox.run('.baguetteBoxSoloItem', {
+    captions: function(element) {
+        return element.getElementsByTagName('img')[0].alt;
     }
-
-    $sliderCloser.on('click', () => {
-      SliderShown(isShownSlider = false)
-    })
   });
-  // SLIDER END
+  // GALERY END
 })()
