@@ -40,8 +40,9 @@
 
   .latest-news-section {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
     margin-bottom: 32px;
 
     @media screen and (max-width: 1024px) {

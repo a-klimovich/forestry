@@ -3,7 +3,10 @@
 .latest-news-item {
   display: flex;
   flex-direction: column;
-  max-width: 253px;
+  min-width: 25%;
+  width: 273px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-bottom: 28px;
   color: $dark;
 
